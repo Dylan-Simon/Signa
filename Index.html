@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNA - Plataforma Inclusiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación Superior -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">SIGNA</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#inclusion" class="nav-link">Inclusión</a></li>
+                <li class="nav-item"><a href="#comunicacion" class="nav-link">Comunicación</a></li>
+                <li class="nav-item"><a href="#autonomia" class="nav-link">Autonomía</a></li>
+                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#juegos" class="nav-link">Juegos ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#snake" class="dropdown-link">Snake</a></li>
+                        <li><a href="#frogger" class="dropdown-link">Frogger</a></li>
+                        <li><a href="#pong" class="dropdown-link">Pong</a></li>
+                        <li><a href="#space-invaders" class="dropdown-link">Space Invaders</a></li>
+                        <li><a href="#dino-run" class="dropdown-link">Dino Run</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button id="login-btn" class="btn-outline">Iniciar Sesión</button>
+                <button id="signup-btn" class="btn-primary">Comenzar gratis</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Bienvenido a SIGNA</h1>
+                <p>SIGNA es una plataforma inclusiva pensada para niños, niñas y jóvenes con discapacidad intelectual leve o moderada. Aquí encontrarás recursos, actividades y juegos para aprender de forma divertida y accesible.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="showSection('membresias')">Ver Planes</button>
+                    <button class="btn-outline" onclick="showSection('juegos')">Jugar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Membresías -->
+        <section id="membresias" class="section-content" style="display: none;">
+            <h2>✨ Elige tu Plan de Membresía</h2>
+            <p>Adapta SIGNA a tus necesidades. Desde uso familiar hasta soluciones institucionales.</p>
+            <div class="plans-container">
+                <!-- Plan Familiar -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>🏠 Plan Familiar</h3>
+                        <span class="price">Gratis</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>10 juegos y actividades educativas básicas.</li>
+                        <li>Pictogramas simples (comunicación limitada).</li>
+                        <li>Interfaz amigable y clara.</li>
+                        <li>Acceso para 1 usuario.</li>
+                    </ul>
+                    <button class="btn-primary plan-btn">Seleccionar Plan</button>
+                </div>
+
+                <!-- Plan Docente -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>🎓 Plan Docente</h3>
+                        <span class="price">$4,99 / mes</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>50 actividades educativas interactivas.</li>
+                        <li>Pictogramas mejorados con más categorías y opciones.</li>
+                        <li>Hasta 20 estudiantes.</li>
+                        <li>Creación de actividades personalizadas.</li>
+                        <li>Panel de progreso para cada estudiante.</li>
+                        <li>Recursos pedagógicos (guías para planificar clases).</li>
+                        <li>Biblioteca de material visual descargable.</li>
+                    </ul>
+                    <button class="btn-primary plan-btn">Seleccionar Plan</button>
+                </div>
+
+                <!-- Plan Institucional -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>🏫 Plan Institucional</h3>
+                        <span class="price">$49,99 / año por aula</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Acceso ilimitado a todas las actividades.</li>
+                        <li>Pictogramas avanzados y voz asistida para comunicación aumentativa.</li>
+                        <li>Usuarios ilimitados.</li>
+                        <li>Reportes detallados de desempeño por aula y por estudiante.</li>
+                        <li>Panel de control institucional.</li>
+                        <li>Personalización completa (logo, colores, dominio propio).</li>
+                        <li>Integración con plataformas educativas (Google Classroom, Moodle, etc.).</li>
+                        <li>Talleres y capacitaciones para docentes.</li>
+                        <li>Soporte técnico prioritario.</li>
+                    </ul>
+                    <button class="btn-primary plan-btn">Seleccionar Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Juegos (Contenedor principal) -->
+        <section id="juegos" class="section-content" style="display: none;">
+            <h2>🎮 Juegos Interactivos</h2>
+            <p>Diviértete aprendiendo con nuestros juegos adaptados. Elige uno de la barra superior o haz clic en uno de los botones de abajo.</p>
+            <div class="game-buttons">
+                <button class="game-btn" data-game="snake">Snake</button>
+                <button class="game-btn" data-game="frogger">Frogger</button>
+                <button class="game-btn" data-game="pong">Pong</button>
+                <button class="game-btn" data-game="space-invaders">Space Invaders</button>
+                <button class="game-btn" data-game="dino-run">Dino Run</button>
+            </div>
+        </section>
+
+        <!-- Contenedores para los Juegos -->
+        <div id="game-container" class="game-container">
+            <div class="game-wrapper">
+                <canvas id="snake-canvas" width="600" height="400"></canvas>
+                <button id="restart-snake" class="restart-btn">Reiniciar Juego</button>
+            </div>
+            <div class="game-wrapper">
+                <canvas id="frogger-canvas" width="600" height="400"></canvas>
+                <button id="restart-frogger" class="restart-btn">Reiniciar Juego</button>
+            </div>
+            <div class="game-wrapper">
+                <canvas id="pong-canvas" width="600" height="400"></canvas>
+                <button id="restart-pong" class="restart-btn">Reiniciar Juego</button>
+            </div>
+            <div class="game-wrapper">
+                <canvas id="space-invaders-canvas" width="600" height="400"></canvas>
+                <button id="restart-space-invaders" class="restart-btn">Reiniciar Juego</button>
+            </div>
+            <div class="game-wrapper">
+                <canvas id="dino-run-canvas" width="600" height="200"></canvas>
+                <button id="restart-dino-run" class="restart-btn">Reiniciar Juego</button>
+            </div>
+        </div>
+
+        <!-- Secciones individuales de juegos (opcional, para enlaces directos) -->
+        <section id="snake" class="section-content" style="display: none;">
+            <h2>🎮 Snake</h2>
+            <p>¡Mueve la serpiente para comer las frutas sin chocar contra las paredes ni contra ti mismo! Ideal para mejorar la coordinación y la concentración.</p>
+            <button class="play-btn" data-game="snake">Jugar Snake</button>
+        </section>
+
+        <section id="frogger" class="section-content" style="display: none;">
+            <h2>🐸 Frogger</h2>
+            <p>Ayuda a la rana a cruzar la calle y el río evitando autos y troncos. ¡Un juego clásico que desarrolla la planificación y la atención!</p>
+            <button class="play-btn" data-game="frogger">Jugar Frogger</button>
+        </section>
+
+        <section id="pong" class="section-content" style="display: none;">
+            <h2>🏓 Pong</h2>
+            <p>El juego de tenis más simple y divertido. Usa las flechas para mover tu raqueta y no dejes que la pelota pase. ¡Perfecto para reflejos y coordinación!</p>
+            <button class="play-btn" data-game="pong">Jugar Pong</button>
+        </section>
+
+        <section id="space-invaders" class="section-content" style="display: none;">
+            <h2>🛸 Space Invaders</h2>
+            <p>Defiende la Tierra disparando a los invasores espaciales. ¡Un juego icónico que mejora la reacción y la estrategia!</p>
+            <button class="play-btn" data-game="space-invaders">Jugar Space Invaders</button>
+        </section>
+
+        <section id="dino-run" class="section-content" style="display: none;">
+            <h2>🦖 Dino Run</h2>
+            <p>Corre, salta y esquiva obstáculos en este emocionante juego. ¡Ideal para practicar la toma de decisiones rápidas!</p>
+            <button class="play-btn" data-game="dino-run">Jugar Dino Run</button>
+        </section>
+
+        <!-- Secciones adicionales (Opcional, puedes agregarlas según el proyecto) -->
+        <section id="inclusion" class="section-content" style="display: none;">
+            <h2>🔹 Inclusión</h2>
+            <p>En esta sección, descubrirás cómo SIGNA promueve la participación plena de todos los usuarios en el entorno digital. Con herramientas adaptadas, pictogramas y retroalimentación visual, cada niño puede sentirse parte del aprendizaje.</p>
+        </section>
+
+        <section id="comunicacion" class="section-content" style="display: none;">
+            <h2>🗣️ Comunicación</h2>
+            <p>El módulo de comunicación aumentativa y alternativa (CAA) te permite expresar necesidades, emociones y deseos mediante pictogramas personalizables y texto a voz. ¡Nunca fue tan fácil comunicarte!</p>
+        </section>
+
+        <section id="autonomia" class="section-content" style="display: none;">
+            <h2>💪 Autonomía Personal</h2>
+            <p>Aprende a gestionar tu día a día con agendas visuales, recordatorios y recompensas. Desde vestirte hasta tomar medicina, SIGNA te acompaña paso a paso para ganar independencia.</p>
+        </section>
+
+        <section id="habilidades" class="section-content" style="display: none;">
+            <h2>🎯 Habilidades Sociales y Académicas</h2>
+            <p>Refuerza tus habilidades básicas en matemáticas, lenguaje y rutinas sociales con actividades interactivas y gamificadas. El aprendizaje nunca fue tan divertido.</p>
+        </section>
+
+    </main>
+
+    <!-- Modal de Inicio de Sesión / Registro -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Iniciar Sesión</h2>
+            <form id="auth-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <div id="confirm-password-container" style="display: none;">
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                </div>
+                <button type="submit" id="submit-btn">Entrar</button>
+                <p id="toggle-form">¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate aquí</a></p>
+                <p id="back-to-login" style="display: none;"><a href="#" id="switch-to-login">Volver a Iniciar Sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
