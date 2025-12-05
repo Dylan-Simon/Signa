@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
@@ -269,6 +269,141 @@ main {
     font-size: 1rem;
 }
 
+/* Sección Logros */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.achievement-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.achievement-card h3 {
+    color: #800080;
+    margin: 10px 0;
+}
+
+/* Sección Biblioteca */
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.library-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.library-item h3 {
+    color: #800080;
+    margin-bottom: 15px;
+}
+
+/* Sección Cómo Jugar */
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tutorial-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tutorial-card h3 {
+    color: #800080;
+    margin-bottom: 10px;
+}
+
+.tutorial-card p {
+    margin: 5px 0;
+}
+
+/* Sección Perfil */
+.perfil-content {
+    text-align: left;
+}
+
+.avatar-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar-option {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.avatar-option:hover {
+    border-color: #FFA500;
+}
+
+.selected-avatar {
+    border-color: #800080;
+}
+
+.config-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.config-options label {
+    font-weight: bold;
+    color: #800080;
+}
+
+.config-options select, .config-options input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Sección Misión del Día */
+.mission-content {
+    text-align: center;
+}
+
+.mission-content h3 {
+    color: #800080;
+    margin-bottom: 10px;
+}
+
 /* Botones de Juegos */
 .game-buttons {
     display: flex;
@@ -332,6 +467,10 @@ main {
 .game-wrapper canvas {
     background-color: black;
     border-radius: 4px;
+    /* Añadir estilo para resaltar píxeles */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 /* Botón Reiniciar */
@@ -355,6 +494,30 @@ main {
 
 .restart-btn:hover {
     background-color: #FF8C00; /* Naranja más oscuro */
+}
+
+/* Botón Iniciar Juego (Pong) */
+.start-game-btn {
+    background-color: #800080; /* Morado SIGNA */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 5;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-game-btn:hover {
+    background-color: #600060; /* Morado más oscuro SIGNA */
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Modal de Inicio de Sesión / Registro */
@@ -446,4 +609,170 @@ main {
 
 #auth-form a:hover {
     text-decoration: underline;
+}
+
+/* Estilo para la puntuación de Dino Run */
+.dino-score, .snake-score, .pong-score, .space-invaders-score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Estilo para feedback en juegos */
+.game-feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 15;
+    display: none; /* Oculto por defecto */
+    animation: feedbackFade 1.5s ease forwards;
+}
+
+@keyframes feedbackFade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Estilo para pantallas de actividad */
+.activity-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.activity-screen h3 {
+    color: #800080;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.activity-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.activity-option {
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.activity-option:hover {
+    border-color: #FFA500;
+}
+
+.activity-option img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.sequence-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.seq-arrow {
+    font-size: 3rem;
+    color: #800080;
+    background-color: #f0f0f0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.sequence-input {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seq-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    border: 2px solid #800080;
+    background-color: white;
+    color: #800080;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.seq-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.count-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-input input {
+    width: 80px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #800080;
+    border-radius: 4px;
+}
+
+.count-input button {
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.count-input button:hover {
+    background-color: #600060;
+}
+
+.activity-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
