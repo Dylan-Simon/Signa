@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNA - Plataforma Inclusiva</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,10 +15,16 @@
             <div class="logo">SIGNA</div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#inclusion" class="nav-link">Inclusión</a></li>
-                <li class="nav-item"><a href="#comunicacion" class="nav-link">Comunicación</a></li>
-                <li class="nav-item"><a href="#autonomia" class="nav-link">Autonomía</a></li>
-                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Aprender ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#inclusion" class="dropdown-link">Inclusión</a></li>
+                        <li><a href="#comunicacion" class="dropdown-link">Comunicación</a></li>
+                        <li><a href="#autonomia" class="dropdown-link">Autonomía</a></li>
+                        <li><a href="#habilidades" class="dropdown-link">Habilidades</a></li>
+                        <li><a href="#biblioteca" class="dropdown-link">Biblioteca</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item dropdown">
                     <a href="#juegos" class="nav-link">Juegos ▼</a>
                     <ul class="dropdown-menu">
@@ -26,6 +33,15 @@
                         <li><a href="#pong" class="dropdown-link">Pong</a></li>
                         <li><a href="#space-invaders" class="dropdown-link">Space Invaders</a></li>
                         <li><a href="#dino-run" class="dropdown-link">Dino Run</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Mi Cuenta ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#perfil" class="dropdown-link">Mi Perfil</a></li>
+                        <li><a href="#como-jugar" class="dropdown-link">¿Cómo Jugar?</a></li>
+                        <li><a href="#logros" class="dropdown-link">Logros</a></li>
+                        <li><a href="#mision-del-dia" class="dropdown-link">Misión del Día</a></li>
                     </ul>
                 </li>
             </ul>
@@ -110,6 +126,110 @@
             </div>
         </section>
 
+        <!-- Sección Logros -->
+        <section id="logros" class="section-content" style="display: none;">
+            <h2>🏆 Logros y Recompensas</h2>
+            <p>¡Celebra tus avances con insignias y recompensas!</p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🍎</div>
+                    <h3>Genio de Frutas</h3>
+                    <p>Comiste 10 manzanas en Snake</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>Maestro de Secuencias</h3>
+                    <p>Completaste 5 secuencias en Frogger</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>Contador Experto</h3>
+                    <p>Acertaste 3 veces en Pong</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Biblioteca -->
+        <section id="biblioteca" class="section-content" style="display: none;">
+            <h2>📚 Biblioteca Educativa</h2>
+            <p>Recursos imprimibles y guías para reforzar el aprendizaje.</p>
+            <div class="library-grid">
+                <div class="library-item">
+                    <h3>Fichas de Emociones</h3>
+                    <button class="btn-primary">Descargar</button>
+                </div>
+                <div class="library-item">
+                    <h3>Guía de Rutinas Diarias</h3>
+                    <button class="btn-primary">Descargar</button>
+                </div>
+                <div class="library-item">
+                    <h3>Colorea a SIGNA</h3>
+                    <button class="btn-primary">Descargar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cómo Jugar -->
+        <section id="como-jugar" class="section-content" style="display: none;">
+            <h2>🎮 ¿Cómo Jugar?</h2>
+            <p>Te explicamos paso a paso cómo disfrutar de nuestros juegos educativos.</p>
+            <div class="tutorial-grid">
+                <div class="tutorial-card">
+                    <h3>Snake</h3>
+                    <p>Usa las flechas para mover la serpiente.</p>
+                    <p>Evita chocar con las paredes o contigo mismo.</p>
+                    <p>¡Come las manzanas para crecer!</p>
+                </div>
+                <div class="tutorial-card">
+                    <h3>Frogger</h3>
+                    <p>Usa las flechas para mover la rana.</p>
+                    <p>Cruza la calle y el río con cuidado.</p>
+                    <p>Llega a la meta sin ser atropellado.</p>
+                </div>
+                <!-- Añadir más juegos aquí -->
+            </div>
+        </section>
+
+        <!-- Sección Perfil del Usuario -->
+        <section id="perfil" class="section-content" style="display: none;">
+            <h2>👤 Mi Perfil</h2>
+            <div class="perfil-content">
+                <h3>Avatar</h3>
+                <div class="avatar-selector">
+                    <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iIzgwMDA4MCIvPjxwYXRoIGQ9Ik0zMCw4MEg3MFY3MEgzMFY4MFoiIGZpbGw9IiM4MDAwODAiLz48L3N2Zz4=" alt="Avatar 1" class="avatar-option selected-avatar" data-avatar="1">
+                    <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iI0ZGQTBDMCIvPjxwYXRoIGQ9Ik0zMCw4MEg3MFY3MEgzMFY4MFoiIGZpbGw9IiNGRkEwQzAiLz48L3N2Zz4=" alt="Avatar 2" class="avatar-option" data-avatar="2">
+                    <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iIzAwRkZDQyIvPjxwYXRoIGQ9Ik0zMCw4MEg3MFY3MEgzMFY4MFoiIGZpbGw9IiMwMEZGQ0MiLz48L3N2Zz4=" alt="Avatar 3" class="avatar-option" data-avatar="3">
+                </div>
+                <h3>Configuración</h3>
+                <div class="config-options">
+                    <label for="font-size">Tamaño de Texto:</label>
+                    <select id="font-size">
+                        <option value="normal">Normal</option>
+                        <option value="large">Grande</option>
+                        <option value="x-large">Muy Grande</option>
+                    </select>
+                    <label for="game-speed">Velocidad de Juego:</label>
+                    <select id="game-speed">
+                        <option value="slow">Lenta</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="fast">Rápida</option>
+                    </select>
+                    <label for="sound">Sonido:</label>
+                    <input type="checkbox" id="sound" checked>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Misión del Día -->
+        <section id="mision-del-dia" class="section-content" style="display: none;">
+            <h2>🌟 Misión del Día</h2>
+            <p>¡Completa un reto especial cada día!</p>
+            <div class="mission-content">
+                <h3>Hoy: ¡Busca la estrella!</h3>
+                <p>En Dino Run, salta cuando veas una estrella para ganar puntos extra.</p>
+            </div>
+        </section>
+
         <!-- Sección Juegos (Contenedor principal) -->
         <section id="juegos" class="section-content" style="display: none;">
             <h2>🎮 Juegos Interactivos</h2>
@@ -126,23 +246,80 @@
         <!-- Contenedores para los Juegos -->
         <div id="game-container" class="game-container">
             <div class="game-wrapper">
+                <div id="snake-activity-screen" class="activity-screen">
+                    <h3>¿Qué debes comer?</h3>
+                    <div class="activity-options">
+                        <div class="activity-option" data-answer="fruta">
+                            <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgZmlsbD0iI0ZGMDAwMCIvPjxwYXRoIGQ9Ik0zMCwzMGMxMC0xMCwyMC0xMCwzMCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48L3N2Zz4=" alt="Manzana">
+                        </div>
+                        <div class="activity-option" data-answer="juguete">
+                            <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzNSIgZmlsbD0iIzAwRjAwMCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iNDAiIHI9IjUiIGZpbGw9IiNGRkYiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjQwIiByPSI1IiBmaWxsPSIjRkZGIi8+PHBhdGggZD0iTTMwLDYwIEE1LDUgMCAwLDEgNzAsNjAiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PC9zdmc+" alt="Pelota">
+                        </div>
+                        <div class="activity-option" data-answer="vestimenta">
+                            <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTAsNTBDMTAsMzAgMzAsMjAgNTAsMjBjMjAsMCA0MCwxMCA0MCwzMGMwLDEwLTEwLDIwLTIwLDIwVjcwYzAsMTAtMTAsMjAtMjAsMjBzLTIwLTEwLTIwLTIwVjQwQzIwLDQwLDEwLDUwLDEwLDUweiIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==" alt="Zapato">
+                        </div>
+                    </div>
+                </div>
                 <canvas id="snake-canvas" width="600" height="400"></canvas>
+                <div id="snake-score" class="game-score">Puntos: 0</div>
+                <div id="snake-feedback" class="game-feedback"></div> <!-- Feedback para Snake -->
                 <button id="restart-snake" class="restart-btn">Reiniciar Juego</button>
             </div>
             <div class="game-wrapper">
+                <div id="frogger-activity-screen" class="activity-screen">
+                    <h3>Memoriza la secuencia:</h3>
+                    <div class="sequence-display">
+                        <span class="seq-arrow">→</span>
+                        <span class="seq-arrow">↑</span>
+                        <span class="seq-arrow">→</span>
+                    </div>
+                    <div class="sequence-input">
+                        <button class="seq-btn" data-dir="right">→</button>
+                        <button class="seq-btn" data-dir="up">↑</button>
+                        <button class="seq-btn" data-dir="left">←</button>
+                        <button class="seq-btn" data-dir="down">↓</button>
+                    </div>
+                </div>
                 <canvas id="frogger-canvas" width="600" height="400"></canvas>
+                <div id="frogger-feedback" class="game-feedback"></div> <!-- Feedback para Frogger -->
                 <button id="restart-frogger" class="restart-btn">Reiniciar Juego</button>
             </div>
             <div class="game-wrapper">
                 <canvas id="pong-canvas" width="600" height="400"></canvas>
+                <div id="pong-score" class="game-score">Puntos: 0</div>
+                <div id="pong-feedback" class="game-feedback"></div> <!-- Feedback para Pong -->
+                <!-- Botón Inicial Pong -->
+                <button id="start-pong-btn" class="start-game-btn">Iniciar Juego</button>
+                <!-- Pantalla de Actividad Pong (después del juego) -->
+                <div id="pong-activity-screen" class="activity-screen" style="display: none;">
+                    <h3>¿Cuántas veces rebotó la pelota?</h3>
+                    <div class="count-input">
+                        <input type="number" min="0" max="10" id="count-answer">
+                        <button id="submit-count">Enviar</button>
+                    </div>
+                </div>
                 <button id="restart-pong" class="restart-btn">Reiniciar Juego</button>
             </div>
             <div class="game-wrapper">
+                <div id="space-invaders-activity-screen" class="activity-screen">
+                    <h3>Elimina solo los enemigos azules</h3>
+                    <div class="target-color" style="background-color: #0000FF; width: 40px; height: 40px; margin: 0 auto;"></div>
+                </div>
                 <canvas id="space-invaders-canvas" width="600" height="400"></canvas>
+                <div id="space-invaders-score" class="game-score">Puntos: 0</div>
+                <div id="space-invaders-feedback" class="game-feedback"></div> <!-- Feedback para Space Invaders -->
                 <button id="restart-space-invaders" class="restart-btn">Reiniciar Juego</button>
             </div>
             <div class="game-wrapper">
+                <div id="dino-activity-screen" class="activity-screen">
+                    <h3>Salta cuando veas una estrella</h3>
+                    <div class="activity-icon">
+                        <img src="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAsMTBMNjAsMzZINTdMODAsNTBNNiw1MEwzMCwzNkwyNyw2MEw1MCw4MEw3Myw2MEw3MCwzNkwxMDAsNTBNNjAsNjRMMzYsNzBMMzAsOTZMNTAsODJMNyw2NEwxMCw0MEwzNCw1MEw1MCwyMEw2Niw1MEw5MCw0MEw3MCw2NEw2NCw5MEw1MCw3NCIgZmlsbD0iI0ZGQ0MwMCIvPjwvc3ZnPg==" alt="Estrella">
+                    </div>
+                </div>
                 <canvas id="dino-run-canvas" width="600" height="200"></canvas>
+                <div id="dino-score" class="game-score">Puntuación: 0</div>
+                <div id="dino-feedback" class="game-feedback"></div> <!-- Feedback para Dino Run -->
                 <button id="restart-dino-run" class="restart-btn">Reiniciar Juego</button>
             </div>
         </div>
@@ -178,7 +355,7 @@
             <button class="play-btn" data-game="dino-run">Jugar Dino Run</button>
         </section>
 
-        <!-- Secciones adicionales (Opcional, puedes agregarlas según el proyecto) -->
+        <!-- Secciones adicionales -->
         <section id="inclusion" class="section-content" style="display: none;">
             <h2>🔹 Inclusión</h2>
             <p>En esta sección, descubrirás cómo SIGNA promueve la participación plena de todos los usuarios en el entorno digital. Con herramientas adaptadas, pictogramas y retroalimentación visual, cada niño puede sentirse parte del aprendizaje.</p>
